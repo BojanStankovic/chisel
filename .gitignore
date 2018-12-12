@@ -2,3 +2,4 @@ python/.vscode/*
 *.pyc
 python/tiny.map
 python/chcuboid.py
+.idea/*
