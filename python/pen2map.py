@@ -288,9 +288,9 @@ def newcuboid (pos, size, material):
 
 
 class roomInfo:
-    def __init__ (self, r, w, d):
-        self.walls = orderWalls (r, w)
-        self.doors = d
+    def __init__ (self, room, walls, doors):
+        self.walls = orderWalls (room, walls)
+        self.doors = doors
         self.doorLeadsTo = []
         self.pythonMonsters = []
         self.monsters = []
@@ -335,12 +335,12 @@ class roomInfo:
     def addSound (self, s, pos):
         self.sounds += [[s, pos]]
 
-def newRoom (n):
+def newRoom (roomNumber):
     global rooms
-    if rooms.has_key (n):
-        error ("room " + n + " has already been defined")
-    rooms[n] = roomInfo (n, [], [])
-    return rooms[n]
+    if rooms.has_key (roomNumber):
+        error ("room " + roomNumber + " has already been defined")
+    rooms[roomNumber] = roomInfo (roomNumber, [], [])
+    return rooms[roomNumber]
 
 
 class boxInfo:
@@ -462,7 +462,20 @@ def usage (code):
 #
 
 def handleOptions ():
-    global debugging, verbose, outputName, toTxt, toMap, ssName, comments, statistics, gameType, genSteps, optimise, regressionRequired, autoBeams, enableVisportals
+    global debugging
+    global verbose
+    global outputName
+    global toTxt
+    global toMap
+    global ssName
+    global comments
+    global statistics
+    global gameType
+    global genSteps
+    global optimise
+    global regressionRequired
+    global autoBeams
+    global enableVisportals
 
     outputName = None
     try:
@@ -682,7 +695,8 @@ def expecting (l):
 
 def lexicalPen (i):
     words = []
-    for l in i.readlines ():
+    lines = i.readlines ()
+    for l in lines:
         w = l.split ()
         w += ['<eoln>']
         for j in w:

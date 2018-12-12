@@ -451,9 +451,9 @@ def scanRoom (topleft, p, mapGrid, walls, doors):
 
 def checkLight (p, l, lightCount):
     if lightCount == lightFrequency:
-        li = light ()
-        li.settype ('MID')
-        l += [p + [li]]
+        li = light ()      # create light
+        li.settype ('MID') # on a pillar
+        l += [p + [li]]    # [position and light]
         lightCount = 0
     else:
         lightCount += 1

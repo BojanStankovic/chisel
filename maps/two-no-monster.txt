@@ -1,0 +1,25 @@
+
+define 1 room 1
+define 2 room 2
+define s worldspawn
+define p monster python_doommarine_mp
+
+define i light
+define f light type floor
+define m light type mid
+
+define R ammo ammo_rockets_large 16
+define G ammo ammo_grenade_small 16
+define L ammo moveable_item_rocketlauncher 1
+define A ammo item_medkit 1
+
+##################################
+# 1  i       i   # 2        i    #
+# s              # i             #
+#                .               #
+#                .       f       #
+#                .               #
+#                .     p         #
+#     RGLA       .               #
+#i            i  #  i          i #
+##################################
