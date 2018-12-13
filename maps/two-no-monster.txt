@@ -14,12 +14,12 @@ define L ammo moveable_item_rocketlauncher 1
 define A ammo item_medkit 1
 
 ##################################
-# 1  i       i   # 2        i    #
-# s              # i             #
+# 1              # 2             #
+#                #               #
 #                .               #
-#                .       f       #
-#                .               #
-#                .     p         #
+#     AAAA       .               #
+#     AAAA       .       s     p #
+#     AAAA       .               #
 #     RGLA       .               #
-#i            i  #  i          i #
+#                #               #
 ##################################
