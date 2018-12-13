@@ -1,0 +1,36 @@
+ROOM 1
+   WALL
+     1 10  18 10
+     18 10  18 1
+     18 1  1 1
+     1 1  1 10
+   DOOR 18 7 18 3 STATUS OPEN LEADS TO 2
+   AMMO ammo_rockets_large AMOUNT 16 AT 7 3
+   AMMO ammo_grenade_small AMOUNT 16 AT 8 3
+   AMMO moveable_item_rocketlauncher AMOUNT 1 AT 9 3
+   AMMO item_medkit AMOUNT 1 AT 10 3
+   LIGHT AT 6 9
+   LIGHT AT 14 9
+   LIGHT AT 2 2
+   LIGHT AT 15 2
+   SPAWN PLAYER AT 3 8
+   INSIDE AT 4 8
+END
+
+ROOM 2
+   WALL
+     18 10  34 10
+     34 10  34 1
+     34 1  18 1
+     18 1  18 10
+   DOOR 18 3 18 7 STATUS OPEN LEADS TO 1
+   MONSTER python_doommarine_mp AT 24 4
+   LIGHT AT 29 9
+   LIGHT AT 20 8
+   LIGHT AT 26 6 ON FLOOR
+   LIGHT AT 21 2
+   LIGHT AT 32 2
+   INSIDE AT 21 8
+END
+
+END.
