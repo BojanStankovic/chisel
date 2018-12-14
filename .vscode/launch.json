@@ -5,23 +5,32 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "pen2map",
-            "type": "python",
-            "request": "launch",
-            "program": "/home/u15022633/Sandpit/chisel/python/pen2map.py",
-            "console": "integratedTerminal",
-            "args": [
-                "-f", "-b", "-c", "/home/u15022633/Sandpit/chisel/python/tiny.ss", "-s", "-e", "-o", "/home/u15022633/Sandpit/chisel/python/tiny.map", "/home/u15022633/Sandpit/chisel/python/tiny.pen"
-            ]
-        },
-        {
             "name": "txt2pen",
             "type": "python",
             "request": "launch",
-            "program": "/home/u15022633/Sandpit/chisel/python/txt2pen.py",
+            "program": "${workspaceFolder}/python/txt2pen.py",
             "console": "integratedTerminal",
             "args": [
-                "-l", "-f", "3", "-o", "tiny.pen", "/home/u15022633/Sandpit/chisel/maps/two-no-monster.txt"
+                "-l",
+                "-f", "3",
+                "-o", "tiny.pen",
+                "${workspaceFolder}/maps/two-no-monster.txt"
+            ]
+        },
+        {
+            "name": "pen2map",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/python/pen2map.py",
+            "console": "integratedTerminal",
+            "args": [
+                "-f",
+                "-b",
+                "-c", "${workspaceFolder}/python/tiny.ss",
+                "-s",
+                "-e",
+                "-o", "${workspaceFolder}/python/tiny.map",
+                "${workspaceFolder}/python/tiny.pen"
             ]
         },
         {
