@@ -1,10 +1,10 @@
-// automatically created from: /home/bojan/Sandpit/chisel/python/tiny.pen
+// automatically created from: tiny.pen
 Version 2
 // entity 0   (contains all room walls, floors, ceilings, lightblocks)
 {
     "classname" "worldspawn"
     "spawnflags" "1"
-    "penmap" "/home/bojan/Sandpit/chisel/python/tiny.pen"
+    "penmap" "tiny.pen"
     // room 1
     // room 2
     // cuboid 1
